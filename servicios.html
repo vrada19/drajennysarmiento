@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="logo.png" alt="Logo"> </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Acerca de</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="tarjetas" id="lista-servicios">
+            <div class="fila">
+                <div class="card"><img src="servicio1.jpg"><h3>Tratamiento Facial</h3><p>Descripción breve...</p></div>
+                <div class="card"><img src="servicio2.jpg"><h3>Acné y Cicatrices</h3><p>Descripción breve...</p></div>
+                <div class="card"><img src="servicio3.jpg"><h3>Rejuvenecimiento</h3><p>Descripción breve...</p></div>
+            </div>
+            <div class="fila">
+                <div class="card"><img src="servicio4.jpg"><h3>Depilación Láser</h3><p>Descripción breve...</p></div>
+                <div class="card"><img src="servicio5.jpg"><h3>Peeling Químico</h3><p>Descripción breve...</p></div>
+            </div>
+            <div class="extra">
+                <div class="fila">
+                    <div class="card"><img src="servicio6.jpg"><h3>Eliminación de Manchas</h3><p>Descripción breve...</p></div>
+                    <div class="card"><img src="servicio7.jpg"><h3>Microdermoabrasión</h3><p>Descripción breve...</p></div>
+                    <div class="card"><img src="servicio8.jpg"><h3>Botox</h3><p>Descripción breve...</p></div>
+                </div>
+                <div class="fila">
+                    <div class="card"><img src="servicio9.jpg"><h3>Ácido Hialurónico</h3><p>Descripción breve...</p></div>
+                    <div class="card"><img src="servicio10.jpg"><h3>Tratamiento Capilar</h3><p>Descripción breve...</p></div>
+                    <div class="card"><img src="servicio11.jpg"><h3>Consulta Dermatológica</h3><p>Descripción breve...</p></div>
+                </div>
+            </div>
+        </div>
+        <button id="ver-mas">Ver Más</button>
+    </section>
+    
+    <footer>
+        <div class="footer-logo"> <img src="logo.png" alt="Logo"> </div>
+        <div class="redes">
+            <a href="#"><img src="facebook.png"></a>
+            <a href="#"><img src="instagram.png"></a>
+            <a href="#"><img src="twitter.png"></a>
+        </div>
+    </footer>
+    
+    <script>
+        $(document).ready(function() {
+            $(".extra").hide();
+            $("#ver-mas").click(function() {
+                $(".extra").slideToggle("slow");
+                $(this).text($(this).text() === "Ver Más" ? "Ver Menos" : "Ver Más");
+            });
+        });
+    </script>
+</body>
+</html>
