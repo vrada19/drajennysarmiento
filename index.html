@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio - Dra. Jenny Sarmiento</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="images/Logo principal horizontal.png" alt="Logo" /></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="images/hero1.jpg" class="active" />
+        <img src="images/hero2.jpg" />
+        <img src="images/hero3.jpg" />
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+  <section class="servicios">
+    <div class="titulo-servicios">
+      <p class="subtitulo">Descubre</p>
+      <h2>Servicios populares</h2>
+    </div>
+    <div class="tarjetas fila-horizontal">
+      <div class="card"><a href="servicios.html#servicio1"><img src="images/servicio1.png" /><h3>Armonización facial</h3></a></div>
+      <div class="card"><a href="servicios.html#servicio2"><img src="images/servicio2.png" /><h3>Micropigmentación de cejas</h3></a></div>
+      <div class="card"><a href="servicios.html#servicio3"><img src="images/servicio3.png" /><h3>Mesoterapia capilar</h3></a></div>
+      <div class="card"><a href="servicios.html#servicio4"><img src="images/servicio4.png" /><h3>Micropigmentación de cicatrices</h3></a></div>
+    </div>
+  </section>
+
+  <section class="beneficios">
+    <h2>Beneficios</h2>
+    <div class="iconos">
+      <div class="icon"><img src="benef1.png" /></div>
+      <div class="icon"><img src="benef2.png" /></div>
+      <div class="icon"><img src="benef3.png" /></div>
+      <div class="icon"><img src="benef4.png" /></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><img src="images/Logo blanco.png" alt="Logo" /></div>
+    <div class="redes">
+      <a href="#"><img src="facebook.png" /></a>
+      <a href="#"><img src="instagram.png" /></a>
+      <a href="#"><img src="twitter.png" /></a>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll(".carousel img");
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[i].classList.add("active");
+    }
+
+    document.querySelector(".next").addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    // Cambio automático hero 5 segundos
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+  </script>
+</body>
+</html>
