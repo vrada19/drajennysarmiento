@@ -274,12 +274,14 @@ form button {
     border-radius: 15px;
     width: 250px;
     text-align: center;
-}
-
-.info-card i {
-    font-size: 24px;
-    margin-bottom: 10px;
-    display: block;
+    
+.info-card {
+    background-color: #a45a6a;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
 }
 .card a {
     color: white;
