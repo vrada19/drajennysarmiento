@@ -99,6 +99,11 @@ button.next {
     justify-content: center;
     gap: 20px;
 }
+.fila-servicios {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
 
 /* TARJETAS DE SERVICIOS */
 .card {
