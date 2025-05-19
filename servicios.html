@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tratamientos estéticos y dermatológicos personalizados con resultados naturales. Conoce los servicios de la Dra. Jenny Sarmiento en un entorno seguro y profesional.">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Questrial&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <header>
+    <div class="logo">
+      <img src="images/Logo principal horizontal.png" alt="Logo de Dra. Jenny Sarmiento" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="servicios">
+      <h1>Nuestros Servicios</h1>
+      <div class="tarjetas" id="lista-servicios">
+        <div class="fila">
+          <div class="card">
+            <img src="images/servicio1.png" alt="Tratamiento de toxina botulínica" />
+            <h3>Toxina botulínica</h3>
+            <p>Tratamiento inyectable que reduce las arrugas y líneas de expresión al relajar los músculos faciales.</p>
+          </div>
+          <div class="card">
+            <img src="images/servicio2.png" alt="Aplicación de ácido hialurónico" />
+            <h3>Ácido hialurónico</h3>
+            <p>Filler dérmico que hidrata y aporta volumen a la piel, suavizando arrugas y mejorando contornos faciales.</p>
+          </div>
+          <div class="card">
+            <img src="images/servicio3.png" alt="Hidratación facial profesional" />
+            <h3>Hidratación facial</h3>
+            <p>Tratamiento que nutre y repara, dejándote una piel más suave, fresca y luminosa.</p>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="card">
+            <img src="images/servicio4.png" alt="Rutina de cuidado facial Skincare" />
+            <h3>Skincare</h3>
+            <p>Tratamiento base para una piel saludable y radiante. Cuidar tu piel diariamente ayuda a mantenerla joven y protegida.</p>
+          </div>
+          <div class="card">
+            <img src="images/servicio5.png" alt="Camuflaje de cicatrices" />
+            <h3>Camuflaje de cicatrices</h3>
+            <p>Procedimiento diseñado para minimizar la visibilidad de cicatrices y mejorar la apariencia de la piel.</p>
+          </div>
+        </div>
+        <div class="extra" hidden>
+          <div class="fila">
+            <div class="card">
+              <img src="images/servicio6.png" alt="Reconstrucción de areolas realistas" />
+              <h3>Areolas realistas</h3>
+              <p>Técnica avanzada que permite restaurar la apariencia natural del pecho después de una mastectomía.</p>
+            </div>
+            <div class="card">
+              <img src="images/servicio7.jpg" alt="Micropigmentación de cejas y labios" />
+              <h3>Micropigmentación de cejas y labios</h3>
+              <p>Técnica de microblading semipermanente que redefine y da forma a tus cejas y labios con resultados naturales.</p>
+            </div>
+            <div class="card">
+              <img src="images/servicio8.jpg" alt="Mesoterapia capilar" />
+              <h3>Mesoterapia capilar</h3>
+              <p>Microinyecciones de vitaminas y minerales para estimular el crecimiento del cabello y mejorar su salud.</p>
+            </div>
+          </div>
+          <div class="fila">
+            <div class="card">
+              <img src="images/servicio9.jpg" alt="Tratamiento con plasma rico en plaquetas" />
+              <h3>Plasma rico en plaquetas</h3>
+              <p>El PRP utiliza tu propia sangre para regenerar la piel, estimulando la producción de colágeno.</p>
+            </div>
+            <div class="card">
+              <img src="images/servicio10.jpg" alt="Tratamiento farmacológico para el cabello" />
+              <h3>Tratamiento farmacológico</h3>
+              <p>Combina medicamentos para fortalecer el cabello y combatir la caída, estimulando los folículos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="ver-mas" aria-expanded="false">Ver Más</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="images/Logo blanco.png" alt="Logo blanco de Dra. Jenny Sarmiento" />
+    </div>
+    <div class="redes">
+      <a href="https://www.instagram.com/drajennysarmiento_/#">
+        <img src="images/icons8-instagram-50 (1).png" alt="Instagram de Dra. Jenny Sarmiento" />
+      </a>
+      <a href="https://facebook.com/jenny.a.sarmiento.9">
+        <img src="images/icons8-facebook-nuevo-50.png" alt="Facebook de Dra. Jenny Sarmiento" />
+      </a>
+      <a href="https://wa.me/3189004216">
+        <img src="images/icons8-whatsapp-50.png" alt="WhatsApp de Dra. Jenny Sarmiento" />
+      </a>
+    </div>
+    <p>2025 &copy; Todos los derechos reservados</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".extra").hide();
+      $("#ver-mas").click(function () {
+        $(".extra").slideToggle("slow");
+        const expanded = $(this).attr("aria-expanded") === "true";
+        $(this).attr("aria-expanded", !expanded);
+        $(this).text(expanded ? "Ver Más" : "Ver Menos");
+      });
+    });
+  </script>
+</body>
+</html>
+

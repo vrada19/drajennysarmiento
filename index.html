@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dra. Jenny Sarmiento</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Questrial&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+  <header>
+    <div class="logo">
+      <img src="images/Logo principal horizontal.png" alt="Logo Jenny Sarmiento" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Acerca de</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="images/hero1.webp" class="active" alt="Modelo rubia fondo rosa 1"/>
+          <img src="images/hero2.webp" alt="Modelo rubia fondo rosa 2" />
+          <img src="images/hero3.webp" alt="Modelo rubia fondo rosa 3" />
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="servicios">
+      <div class="titulo-servicios">
+        <p class="subtitulo">Descubre</p>
+        <p class="titulo-servicios-h2"> Servicios Populares</p>
+      </div>
+      <div class="tarjetas fila-horizontal">
+        <div class="card">
+          <a href="servicios.html#servicio1">
+            <img src="images/servicio1.png" alt="Armonización facial" />
+            <h3>Armonización facial</h3>
+          </a>
+        </div>
+        <div class="card">
+          <a href="servicios.html#servicio2">
+            <img src="images/servicio2.png" alt="Micropigmentación de cejas" />
+            <h3>Micropigmentación de cejas</h3>
+          </a>
+        </div>
+        <div class="card">
+          <a href="servicios.html#servicio3">
+            <img src="images/servicio3.png" alt="Mesoterapia Capilar" />
+            <h3>Mesoterapia capilar</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="beneficios">
+      <div class="titulo-servicios">
+        <p class="subtitulo">Beneficios</p>
+        <p class="titulo-servicios-h2"> Conoce lo que ofrecemos</p>
+      </div>
+      <div class="tarjetas-beneficios">
+        <div class="card-beneficio">
+          <img src="images/icons8-burbuja-de-diálogo-50.png" alt="Icono diálogo" class="icono-beneficio" />
+          <h3>Atención personalizada</h3>
+          <p>Evaluaciones detalladas para crear planes de cuidado específicos para cada piel.</p>
+        </div>
+        <div class="card-beneficio">
+          <img src="images/icons8-usuario-femenino-50.png" alt="Icono usuario femenino" class="icono-beneficio" />
+          <h3>Resultados naturales</h3>
+          <p>Tratamientos diseñados para realzar tu belleza sin alterar tu esencia.</p>
+        </div>
+        <div class="card-beneficio">
+          <img src="images/icons8-para-ti-50.png" alt="Icono beneficio" class="icono-beneficio" />
+          <h3>Comodidad</h3>
+          <p>Espacios diseñados para brindarte una experiencia premium y relajante.</p>
+        </div>
+        <div class="card-beneficio">
+          <img src="images/icons8-bloquear-50.png" alt="Icono candado cerrado" class="icono-beneficio" />
+          <h3>Confianza</h3>
+          <p>Procedimientos realizados con tecnología avanzada y altos estándares médicos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="images/Logo blanco.png" alt="Logo blanco Jenny Sarmiento" />
+    </div>
+    <div class="redes">
+      <a href="https://www.instagram.com/drajennysarmiento_/#"><img src="images/icons8-instagram-50 (1).png" alt="Icono instagram"/></a>
+      <a href="https://facebook.com/jenny.a.sarmiento.9"><img src="images/icons8-facebook-nuevo-50.png" alt="Icono facebook" /></a>
+      <a href="https://wa.me/3189004216"><img src="images/icons8-whatsapp-50.png" alt="Icono whatsapp" /></a>
+    </div>
+    <p>2025 &copy; Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll(".carousel img");
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[i].classList.add("active");
+    }
+
+    document.querySelector(".next").addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    // Cambio automático hero 5 segundos
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+  </script>
+</body>
+</html>
